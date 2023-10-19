@@ -1,0 +1,392 @@
+﻿<UserControl x:Class="WPF_LoginForm.Views.AsistenciaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:local="clr-namespace:WPF_LoginForm.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="450">
+    
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="310"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="410"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <!--TITLE-->
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="1"  Grid.Column="1"  HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" FontFamily="Montserrat">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush>
+                                <GradientStop Color="{StaticResource winBorderColor22}" Offset="0"/>
+                                <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75"/>
+                                <GradientStop Color="{StaticResource winBorderColor6}" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                                CONTROL DE ASISTENCIA VIRTUAL ZZOOTEC
+                    </TextBlock>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border BorderBrush="{StaticResource color6}" BorderThickness="1" Grid.Row="1" Grid.Column="1">
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--DNI-->
+                            <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal" >
+                                <fa:IconImage Icon="IdCard" Height="14" Width="16" Foreground="{StaticResource color15}"/>
+                                <Label Content="DNI" Foreground="{StaticResource color15}" FontSize="11" FontWeight="Black"
+                                       FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBox Grid.Column="4" FontSize="12" VerticalAlignment="Center" Background="Transparent" FontWeight="Black"
+                                     FontFamily="Montserrat" Foreground="{StaticResource color15}" CaretBrush="{StaticResource color15}"
+                                     BorderBrush="{StaticResource color15}" VerticalContentAlignment="Center"  />
+                            <Label Grid.Column="3" Content=":" Foreground="{StaticResource color15}" FontSize="12"
+                                   FontWeight="Black" FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center"/>
+
+                            <!--ROLES-->
+                            <StackPanel Grid.Column="6" Grid.Row="0" Orientation="Horizontal" >
+                                <fa:IconImage Icon="IdCardClip" Height="14" Width="16" Foreground="{StaticResource color15}"/>
+                                <Label Content="ROL" Foreground="{StaticResource color15}" FontSize="11" FontWeight="Black"
+                                       FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <TextBox Grid.Column="8" FontSize="12" VerticalAlignment="Center" Background="Transparent" FontWeight="Black"
+                                     FontFamily="Montserrat" Foreground="{StaticResource color15}" CaretBrush="{StaticResource color15}"
+                                     BorderBrush="{StaticResource color15}" VerticalContentAlignment="Center" Height="16" />
+                            <Label Grid.Column="7" Content=":" Foreground="{StaticResource color15}" FontSize="12"
+                                   FontWeight="Black" FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center"/>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+
+                <Border BorderBrush="{StaticResource color6}" BorderThickness="1" Grid.Row="5" Grid.Column="1">
+                    <Grid Grid.Row="3" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="15"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--FECHA-->
+                        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                            <fa:IconImage Icon="CalendarDay" Height="14" Width="16" Foreground="{StaticResource color15}"/>
+                            <Label Content="FECHA" Foreground="{StaticResource color15}" FontSize="11" FontWeight="Black"
+                                   FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <Label Grid.Column="2" Grid.Row="1" Content=":" Foreground="{StaticResource color15}" FontSize="12"
+                               FontWeight="Black" FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" />
+                        <DatePicker Grid.Column="2" Grid.Row="1" SelectedDate="{Binding Path=FechaEstimada,Mode=TwoWay,
+                                    UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" 
+                                    IsEnabled="{Binding IsEnabledFechaBolsa,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="5" Margin="15,0,15,0"/>
+
+                        <!--NAME-->
+                        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal"  >
+                            <fa:IconImage Icon="IdCard" Height="14" Width="16" Foreground="{StaticResource color15}"/>
+                            <Label Content="Name" Foreground="{StaticResource color15}" FontSize="11" FontWeight="Black"
+                                    FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <TextBox Grid.Column="3" Grid.Row="2" FontSize="12" VerticalAlignment="Center" Background="Transparent" FontWeight="Black"
+                                 FontFamily="Montserrat" Foreground="{StaticResource color15}" CaretBrush="{StaticResource color15}"
+                                 BorderBrush="{StaticResource color15}" VerticalContentAlignment="Center" />
+                        <Label Grid.Column="2" Grid.Row="2" Content=":" Foreground="{StaticResource color15}" FontSize="12"
+                               FontWeight="Black" FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" />
+
+                        <!--CARGO-->
+                        <StackPanel Grid.Column="5" Grid.Row="2" Orientation="Horizontal"  >
+                            <fa:IconImage Icon="IdBadge" Height="14" Width="16" Foreground="{StaticResource color15}"/>
+                            <Label Content="Cargo" Foreground="{StaticResource color15}" FontSize="11" FontWeight="Black"
+                                   FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <TextBox Grid.Column="7" Grid.Row="2" FontSize="12" VerticalAlignment="Center" Background="Transparent" FontWeight="Black"
+                                 FontFamily="Montserrat" Foreground="{StaticResource color15}" CaretBrush="{StaticResource color15}"
+                                 BorderBrush="{StaticResource color15}" VerticalContentAlignment="Center" />
+                        <Label Grid.Column="6" Grid.Row="2" Content=":" Foreground="{StaticResource color15}" FontSize="12"
+                               FontWeight="Black" FontFamily="Montserrat" Background="Transparent" VerticalAlignment="Center" />
+
+
+                    </Grid>
+                </Border>
+
+
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="1" Name="txtClock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" 
+                           Foreground="{StaticResource color15}"/>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--PUBLICAR-->
+                    <Button Grid.Column="2"
+                          Grid.Row="1"
+                          FontWeight="Bold"
+                          Command="{Binding LoginCommand}"                            
+                          FontSize="11"
+                          FontFamily="Montserrat"
+                          Cursor="Hand"
+                          BorderThickness="0"
+                          VerticalAlignment="Center">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Height="20" CornerRadius="4" 
+                                                    Background="{StaticResource color16}"
+                                                    BorderBrush="{StaticResource color9}" 
+                                                    BorderThickness="1">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#836EFB"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Save" Height="14" Width="16" Foreground="{StaticResource color9}"/>
+                            <TextBlock Text=" Grabar" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{StaticResource color15}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!--EDITAR-->
+                    <Button Grid.Column="2"
+                          Grid.Row="3"
+                          FontWeight="Bold"
+                          Command="{Binding LoginCommand}"                            
+                          FontSize="11"
+                          FontFamily="Montserrat"
+                          Cursor="Hand"
+                          BorderThickness="0"
+                          VerticalAlignment="Center" >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Height="20" CornerRadius="4" 
+                                                  Background="{StaticResource color16}"
+                                                  BorderBrush="{StaticResource color18}" 
+                                                  BorderThickness="1" >
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#836EFB"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Edit" Height="14" Width="16" Foreground="{StaticResource color18}"/>
+                            <TextBlock Text=" Actualizar" Foreground="{StaticResource color15}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!--ELIMINAR-->
+                    <Button Grid.Column="2"
+                            Grid.Row="5"
+                            FontWeight="Bold"
+                            Command="{Binding LoginCommand}"                            
+                            FontSize="11"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            VerticalAlignment="Center">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Height="20" CornerRadius="4" 
+                                                  Background="{StaticResource color16}"
+                                                  BorderBrush="{StaticResource color12}" 
+                                                  BorderThickness="1">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#836EFB"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="DoorOpen" Height="14" Width="16" Foreground="{StaticResource color12}"/>
+                            <TextBlock Text=" Salir" Foreground="{StaticResource color15}"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!--CHATBOT-->
+                    <Button Grid.Column="3"
+                        Grid.Row="7"
+                        FontWeight="Bold"
+                        Command="{Binding LoginCommand}"                            
+                        FontSize="11"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        BorderThickness="0"
+                        VerticalAlignment="Center">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Height="20" CornerRadius="4" 
+                                                  Background="{StaticResource color16}"
+                                                  BorderBrush="{StaticResource color11}" 
+                                                  BorderThickness="1">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#836EFB"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Message" Height="14" Width="16" Foreground="{StaticResource color11}"/>
+                        </StackPanel>
+                    </Button>
+                    <Label Grid.Column="2" Grid.Row="7" Content="Asistencia" Foreground="{StaticResource color15}" FontSize="12"
+                           FontWeight="Black" FontFamily="Montserrat" Background="Transparent" HorizontalAlignment="Center" Height="25" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
